@@ -1,4 +1,4 @@
-module github.com/grafana/athena-datasource
+module github.com/cloudwicklabs/amorphic-athena-datasource
 
 go 1.20
 
@@ -41,6 +41,7 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20190430165422-3e4dfb77656c // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
+	github.com/grafana/athena-datasource v0.2.4-0.20230620173559-5c9f6a3e1b16 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.11.3 // indirect
