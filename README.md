@@ -197,15 +197,30 @@ You can configure the Athena data source using configuration files with Grafana'
 
 Here are some provisioning examples.
 
-### Using AWS SDK (default)
+### Using Amorphic custom credentials (default)
 
 ```yaml
 apiVersion: 1
 datasources:
   - name: Athena
-    type: grafana-athena-datasource
+    type: amorphic-athena-datasource
     jsonData:
-      authType: default
+      authType: amorphic
+      defaultRegion: eu-west-2
+      catalog: AwsDataCatalog
+      database: '<your athena database>'
+      workgroup: '<your athena workgroup>'
+```
+
+### Using AWS SDK
+
+```yaml
+apiVersion: 1
+datasources:
+  - name: Athena
+    type: amorphic-athena-datasource
+    jsonData:
+      authType: sdk-default
       defaultRegion: eu-west-2
       catalog: AwsDataCatalog
       database: '<your athena database>'
@@ -219,7 +234,7 @@ apiVersion: 1
 
 datasources:
   - name: Athena
-    type: grafana-athena-datasource
+    type: amorphic-athena-datasource
     jsonData:
       authType: credentials
       defaultRegion: eu-west-2
@@ -236,7 +251,7 @@ apiVersion: 1
 
 datasources:
   - name: Athena
-    type: grafana-athena-datasource
+    type: amorphic-athena-datasource
     jsonData:
       authType: keys
       defaultRegion: eu-west-2
@@ -254,7 +269,7 @@ datasources:
 apiVersion: 1
 datasources:
   - name: Athena
-    type: grafana-athena-datasource
+    type: amorphic-athena-datasource
     jsonData:
       authType: default
       assumeRoleArn: arn:aws:iam::123456789012:root

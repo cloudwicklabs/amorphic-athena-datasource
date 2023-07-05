@@ -46,7 +46,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${datasource}"
       },
       "fieldConfig": {
@@ -186,7 +186,7 @@
             "region": "__default"
           },
           "datasource": {
-            "type": "grafana-athena-datasource",
+            "type": "amorphic-athena-datasource",
             "uid": "${datasource}"
           },
           "format": 1,
@@ -200,7 +200,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${datasource}"
       },
       "fieldConfig": {
@@ -312,7 +312,7 @@
             "region": "__default"
           },
           "datasource": {
-            "type": "grafana-athena-datasource",
+            "type": "amorphic-athena-datasource",
             "uid": "${datasource}"
           },
           "format": 0,
@@ -334,15 +334,15 @@
       {
         "current": {
           "selected": false,
-          "text": "Amazon Athena",
-          "value": "Amazon Athena"
+          "text": "Amorphic Amazon Athena",
+          "value": "Amorphic Amazon Athena"
         },
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "datasource",
         "options": [],
-        "query": "grafana-athena-datasource",
+        "query": "amorphic-athena-datasource",
         "queryValue": "",
         "refresh": 1,
         "regex": "",
@@ -356,7 +356,7 @@
           "value": "vpc_flow_logs"
         },
         "datasource": {
-          "type": "grafana-athena-datasource",
+          "type": "amorphic-athena-datasource",
           "uid": "${datasource}"
         },
         "definition": "",
@@ -381,7 +381,7 @@
           "value": "vpc_flow_logs"
         },
         "datasource": {
-          "type": "grafana-athena-datasource",
+          "type": "amorphic-athena-datasource",
           "uid": "${datasource}"
         },
         "definition": "",

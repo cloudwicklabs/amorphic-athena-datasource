@@ -1,7 +1,7 @@
 {
-  "name": "grafana-athena-datasource",
+  "name": "amorphic-athena-datasource",
   "version": "2.10.1",
-  "description": "Use Amazon Athena with Grafana",
+  "description": "Use Amorphic Amazon Athena with Grafana",
   "scripts": {
     "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
     "dev": "webpack -c ./.config/webpack/webpack.config.ts --env development",
@@ -20,7 +20,7 @@
     "typecheck": "tsc --noEmit",
     "watch": "webpack -w -c ./.config/webpack/webpack.config.ts --env development"
   },
-  "author": "Grafana Labs",
+  "author": "Cloudwick Technologies",
   "license": "Apache-2.0",
   "dependencies": {
     "@grafana/async-query-data": "0.1.6",

@@ -69,7 +69,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -159,7 +159,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -223,7 +223,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -313,7 +313,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -390,7 +390,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -489,7 +489,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -561,7 +561,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -627,7 +627,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -726,7 +726,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -782,7 +782,7 @@
             "region": "__default"
           },
           "datasource": {
-            "type": "grafana-athena-datasource",
+            "type": "amorphic-athena-datasource",
             "uid": "eiO6Wpl7z"
           },
           "format": 1,
@@ -796,7 +796,7 @@
     },
     {
       "datasource": {
-        "type": "grafana-athena-datasource",
+        "type": "amorphic-athena-datasource",
         "uid": "${Datasource}"
       },
       "fieldConfig": {
@@ -972,7 +972,7 @@
             "region": "__default"
           },
           "datasource": {
-            "type": "grafana-athena-datasource",
+            "type": "amorphic-athena-datasource",
             "uid": "eiO6Wpl7z"
           },
           "format": 1,
@@ -993,15 +993,15 @@
       {
         "current": {
           "selected": false,
-          "text": "Amazon Athena CUR",
-          "value": "Amazon Athena CUR"
+          "text": "Amorphic Amazon Athena CUR",
+          "value": "Amorphic Amazon Athena CUR"
         },
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "Datasource",
         "options": [],
-        "query": "grafana-athena-datasource",
+        "query": "amorphic-athena-datasource",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1014,7 +1014,7 @@
           "value": "athenacurcfn_edwin_cur_athena"
         },
         "datasource": {
-          "type": "grafana-athena-datasource",
+          "type": "amorphic-athena-datasource",
           "uid": "${Datasource}"
         },
         "definition": "",

@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   grafana:
-    container_name: 'grafana-athena-datasource'
+    container_name: 'amorphic-athena-datasource'
     build:
       context: ./.config
       args:
@@ -10,5 +10,5 @@ services:
     ports:
       - 3000:3000/tcp
     volumes:
-      - ./dist:/var/lib/grafana/plugins/grafana-athena-datasource
+      - ./dist:/var/lib/grafana/plugins/amorphic-athena-datasource
       - ./provisioning:/etc/grafana/provisioning

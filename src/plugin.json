@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "datasource",
-  "name": "Amazon Athena",
-  "id": "grafana-athena-datasource",
+  "name": "Amorphic Amazon Athena",
+  "id": "amorphic-athena-datasource",
   "metrics": true,
   "backend": true,
   "executable": "gpx_athena",
@@ -21,9 +21,9 @@
     }
   ],
   "info": {
-    "description": "Use Amazon Athena with Grafana",
+    "description": "Use Amorphic Amazon Athena with Grafana",
     "author": {
-      "name": "Grafana Labs",
+      "name": "Cloudwick Technologies",
       "url": "https://grafana.com"
     },
     "keywords": ["datasource", "athena"],
