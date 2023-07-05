@@ -3,7 +3,7 @@ import { DataSource } from 'datasource';
 import { getAthenaCompletionProvider } from 'language/completionItemProvider';
 import { TABLE_MACRO } from 'language/macros';
 import React, { useRef, useMemo, useCallback, useEffect } from 'react';
-import { AthenaQuery } from 'types';
+import { AthenaQuery } from './amorphic-types'; // amorphic-types
 
 interface RawEditorProps {
   query: AthenaQuery;

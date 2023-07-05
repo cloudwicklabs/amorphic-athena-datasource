@@ -1,5 +1,5 @@
 import React from 'react';
-import { AthenaQuery, AthenaDataSourceOptions } from './types';
+import { AthenaQuery, AthenaDataSourceOptions } from './types'; // amorphic-types
 import { QueryEditorProps } from '@grafana/data';
 import { DataSource } from 'datasource';
 import { QueryEditorForm } from './QueryEditorForm';

@@ -3,7 +3,7 @@ import { CustomVariableSupport, DataQueryRequest, DataQueryResponse } from '@gra
 import { VariableQueryCodeEditor } from './VariableQueryEditor';
 import { assign } from 'lodash';
 import { DataSource } from './datasource';
-import { AthenaQuery, defaultQuery } from './types';
+import { AthenaQuery, defaultQuery } from './types'; // amorphic-types
 
 export class AthenaVariableSupport extends CustomVariableSupport<DataSource, AthenaQuery, AthenaQuery> {
   constructor(private readonly datasource: DataSource) {

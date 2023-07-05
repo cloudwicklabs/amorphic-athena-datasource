@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { QueryEditorProps, SelectableValue } from '@grafana/data';
 import { DataSource } from './datasource';
-import { AthenaDataSourceOptions, AthenaQuery, defaultQuery, SelectableFormatOptions } from './types';
+import { AthenaDataSourceOptions, AthenaQuery, defaultQuery, SelectableFormatOptions } from './types'; // amorphic-types
 import { InlineSegmentGroup } from '@grafana/ui';
 import { FormatSelect, ResourceSelector } from '@grafana/aws-sdk';
 import { selectors } from 'tests/selectors';

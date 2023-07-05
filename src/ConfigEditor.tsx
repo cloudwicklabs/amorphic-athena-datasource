@@ -1,9 +1,21 @@
 import React, { useState, FormEvent } from 'react';
 import { DataSourcePluginOptionsEditorProps, DataSourceSettings, SelectableValue } from '@grafana/data';
-import { AthenaDataSourceOptions, AthenaDataSourceSecureJsonData, AthenaDataSourceSettings, defaultKey } from './types';
 import { getBackendSrv } from '@grafana/runtime';
-import { InlineInput, ConfigSelect, ConnectionConfig } from '@grafana/aws-sdk';
 import { selectors } from 'tests/selectors';
+
+import {
+  AthenaDataSourceOptions,
+  AthenaDataSourceSecureJsonData,
+  AthenaDataSourceSettings,
+  defaultKey,
+  // InlineInput,
+  // ConfigSelect,
+  // ConnectionConfig,
+} from './types'; // amorphic-types
+
+
+import { InlineInput, ConfigSelect, ConnectionConfig } from '@grafana/aws-sdk';
+
 
 type Props = DataSourcePluginOptionsEditorProps<AthenaDataSourceOptions, AthenaDataSourceSecureJsonData>;
 

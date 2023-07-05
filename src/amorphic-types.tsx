@@ -11,7 +11,7 @@ import { InputActionMeta } from '@grafana/ui';
 
 // import { DataSourceJsonData, DataSourceSettings, DataSourcePluginOptionsEditorProps, SelectableValue, DataQuery, DataSourceApi, QueryEditorProps, ScopedVars } from '@grafana/data';
 
-interface AwsAuthDataSourceSecureJsonData {
+export interface AwsAuthDataSourceSecureJsonData {
   accessKey?: string;
   secretKey?: string;
   sessionToken?: string;
@@ -25,10 +25,10 @@ export declare enum AwsAuthType {
   /**
    * @deprecated use default
    */
-  ARN = "arn"
+  ARN = 'arn',
 }
 
-interface AwsAuthDataSourceJsonData extends DataSourceJsonData {
+export interface AwsAuthDataSourceJsonData extends DataSourceJsonData {
   authType?: AwsAuthType;
   assumeRoleArn?: string;
   externalId?: string;
@@ -74,14 +74,17 @@ export interface ConfigSelectProps
 
 export declare function ConfigSelect(props: ConfigSelectProps): JSX.Element;
 
-interface AwsAuthDataSourceSecureJsonData {
+export interface AwsAuthDataSourceSecureJsonData {
   accessKey?: string;
   secretKey?: string;
   sessionToken?: string;
 }
-declare type AwsAuthDataSourceSettings = DataSourceSettings<AwsAuthDataSourceJsonData, AwsAuthDataSourceSecureJsonData>;
+export declare type AwsAuthDataSourceSettings = DataSourceSettings<
+  AwsAuthDataSourceJsonData,
+  AwsAuthDataSourceSecureJsonData
+>;
 
-interface InlineInputProps extends DataSourcePluginOptionsEditorProps<{}, AwsAuthDataSourceSecureJsonData> {
+export interface InlineInputProps extends DataSourcePluginOptionsEditorProps<{}, AwsAuthDataSourceSecureJsonData> {
   value: string;
   onChange: (e: FormEvent<HTMLInputElement>) => void;
   label?: string;
@@ -92,11 +95,11 @@ interface InlineInputProps extends DataSourcePluginOptionsEditorProps<{}, AwsAut
   disabled?: boolean;
   labelWidth?: number;
 }
-declare function InlineInput(props: InlineInputProps): JSX.Element;
+export declare function InlineInput(props: InlineInputProps): JSX.Element;
 
-declare const DEFAULT_LABEL_WIDTH = 28;
+export declare const DEFAULT_LABEL_WIDTH = 28;
 
-interface ConnectionConfigProps<
+export interface ConnectionConfigProps<
   J extends AwsAuthDataSourceJsonData = AwsAuthDataSourceJsonData,
   S = AwsAuthDataSourceSecureJsonData
 > extends DataSourcePluginOptionsEditorProps<J, S> {
@@ -108,16 +111,16 @@ interface ConnectionConfigProps<
   children?: React.ReactNode;
   labelWidth?: number;
 }
-declare const ConnectionConfig: FC<ConnectionConfigProps>;
-declare const SIGV4ConnectionConfig: React.FC<DataSourcePluginOptionsEditorProps<any, any>>;
+export declare const ConnectionConfig: FC<ConnectionConfigProps>;
+export declare const SIGV4ConnectionConfig: React.FC<DataSourcePluginOptionsEditorProps<any, any>>;
 
-enum FormatOptions {
+export enum FormatOptions {
   TimeSeries,
   Table,
   Logs,
 }
 
-const SelectableFormatOptions: Array<SelectableValue<FormatOptions>> = [
+export const SelectableFormatOptions: Array<SelectableValue<FormatOptions>> = [
   {
     label: 'Time Series',
     value: FormatOptions.TimeSeries,
@@ -147,12 +150,12 @@ export interface AthenaQuery extends SQLQuery {
   queryID?: string;
 }
 
-const defaultKey = '__default';
+export const defaultKey = '__default';
 
-const DEFAULT_RESULT_REUSE_ENABLED = false;
-const DEFAULT_RESULT_REUSE_MAX_AGE_IN_MINUTES = 60;
+export const DEFAULT_RESULT_REUSE_ENABLED = false;
+export const DEFAULT_RESULT_REUSE_MAX_AGE_IN_MINUTES = 60;
 
-const defaultQuery: Partial<AthenaQuery> = {
+export const defaultQuery: Partial<AthenaQuery> = {
   format: FormatOptions.Table,
   rawSQL: '',
   connectionArgs: {
@@ -167,7 +170,7 @@ const defaultQuery: Partial<AthenaQuery> = {
 /**
  * These are options configured for each DataSource instance
  */
-interface AthenaDataSourceOptions extends AwsAuthDataSourceJsonData {
+export interface AthenaDataSourceOptions extends AwsAuthDataSourceJsonData {
   catalog?: string;
   database?: string;
   workgroup?: string;
@@ -177,25 +180,5 @@ interface AthenaDataSourceOptions extends AwsAuthDataSourceJsonData {
 /**
  * Values that are used in the backend, but never sent over HTTP to the frontend
  */
-interface AthenaDataSourceSecureJsonData extends AwsAuthDataSourceSecureJsonData {}
-type AthenaDataSourceSettings = DataSourceSettings<AthenaDataSourceOptions, AthenaDataSourceSecureJsonData>;
-export {
-  AthenaDataSourceOptions,
-  AthenaDataSourceSecureJsonData,
-  AthenaDataSourceSettings,
-  // AthenaQuery,
-  AwsAuthDataSourceJsonData,
-  AwsAuthDataSourceSecureJsonData,
-  AwsAuthDataSourceSettings,
-  ConnectionConfig,
-  ConnectionConfigProps,
-  DEFAULT_LABEL_WIDTH,
-  DEFAULT_RESULT_REUSE_ENABLED,
-  DEFAULT_RESULT_REUSE_MAX_AGE_IN_MINUTES,
-  defaultKey,
-  defaultQuery,
-  FormatOptions,
-  InlineInput,
-  SelectableFormatOptions,
-  SIGV4ConnectionConfig,
-};
+export interface AthenaDataSourceSecureJsonData extends AwsAuthDataSourceSecureJsonData {}
+export type AthenaDataSourceSettings = DataSourceSettings<AthenaDataSourceOptions, AthenaDataSourceSecureJsonData>;
