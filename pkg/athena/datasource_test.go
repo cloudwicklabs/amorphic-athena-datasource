@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"testing"
 
 	"github.com/grafana/grafana-aws-sdk/pkg/awsds"
@@ -23,14 +24,17 @@ type mockClient struct {
 
 func (m *mockClient) Init(config backend.DataSourceInstanceSettings) {}
 func (m *mockClient) GetDB(id int64, options sqlds.Options, settingsLoader sqlModels.Loader, apiLoader sqlAPI.Loader, driverLoader awsDriver.Loader) (*sql.DB, error) {
+	fmt.Printf("GetDB.options: %v\n", options)
 	m.wasCalledWith = options
 	return nil, nil
 }
 func (m *mockClient) GetAsyncDB(id int64, options sqlds.Options, settingsLoader sqlModels.Loader, apiLoader sqlAPI.Loader, driverLoader asyncDriver.Loader) (awsds.AsyncDB, error) {
+	fmt.Printf("GetAsyncDB.options: %v\n", options)
 	m.wasCalledWith = options
 	return nil, nil
 }
 func (m *mockClient) GetAPI(id int64, options sqlds.Options, settingsLoader sqlModels.Loader, apiLoader sqlAPI.Loader) (sqlAPI.AWSAPI, error) {
+	fmt.Printf("GetAPI.options: %v\n", options)
 	m.wasCalledWith = options
 	return nil, errors.New("fake api error")
 }
@@ -48,7 +52,7 @@ func TestConnection(t *testing.T) {
 		fakeQueryArgs := json.RawMessage(`{"test": "thing", "region": ""}`)
 		_, err := ds.Connect(fakeConfig, fakeQueryArgs)
 
-		assert.Nil(t, err)
+		assert.NoError(t, err, "expect no error")
 		assert.Equal(t, "__default", mc.wasCalledWith["region"])
 	})
 

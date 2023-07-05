@@ -64,6 +64,20 @@ func (s *AthenaDatasource) Settings(_ backend.DataSourceInstanceSettings) sqlds.
 
 // Connect opens a sql.DB connection using datasource settings
 func (s *AthenaDatasource) Connect(config backend.DataSourceInstanceSettings, queryArgs json.RawMessage) (*sql.DB, error) {
+
+	// cp := NewAmorphicCustomCredentialsProvider("amorphicGatewayURL", "amorphicPatToken", "amorphicRoleId")
+	cp := NewAmorphicCustomCredentialsProvider("example.com", "amorphicPatToken", "amorphicRoleId")
+	if err := cp.Refresh(); err != nil {
+		fmt.Println("RefreshError:", err)
+		return nil, err
+	}
+	credentials, err := cp.GetCredentials()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return nil, err
+	}
+	fmt.Println("Credentials:", credentials)
+
 	s.awsDS.Init(config)
 	args, err := parseArgs(queryArgs)
 	if err != nil {
@@ -74,6 +88,7 @@ func (s *AthenaDatasource) Connect(config backend.DataSourceInstanceSettings, qu
 	if args["region"] == "" {
 		args["region"] = sqlModels.DefaultKey
 	}
+	fmt.Println("args: ", args)
 
 	return s.awsDS.GetDB(config.ID, args, models.New, api.New, driver.NewSync)
 }
@@ -81,7 +96,9 @@ func (s *AthenaDatasource) Connect(config backend.DataSourceInstanceSettings, qu
 func (s *AthenaDatasource) GetAsyncDB(config backend.DataSourceInstanceSettings, queryArgs json.RawMessage) (awsds.AsyncDB, error) {
 	s.awsDS.Init(config)
 	args, err := parseArgs(queryArgs)
+	fmt.Println("options:: ", queryArgs, err)
 	if err != nil {
+		fmt.Println("options:: ", queryArgs, err)
 		return nil, err
 	}
 
@@ -89,6 +106,7 @@ func (s *AthenaDatasource) GetAsyncDB(config backend.DataSourceInstanceSettings,
 	if args["region"] == "" {
 		args["region"] = sqlModels.DefaultKey
 	}
+	fmt.Println("options- args:: ", args, err)
 
 	return s.awsDS.GetAsyncDB(config.ID, args, models.New, api.New, driver.New)
 }
