@@ -6,7 +6,7 @@ import {
   defaultKey,
   DEFAULT_RESULT_REUSE_ENABLED,
   DEFAULT_RESULT_REUSE_MAX_AGE_IN_MINUTES,
-} from '../types'; // amorphic-types
+} from '../amorphic-types'; // amorphic-types
 import { DataSource } from '../datasource';
 
 export const mockDatasourceOptions: DataSourcePluginOptionsEditorProps<

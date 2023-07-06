@@ -1,13 +1,62 @@
-import React, { FC } from 'react';
-import { FormEvent } from 'react-dom/node_modules/@types/react';
+// import React, { FC } from 'react';
+// import { FormEvent } from 'react-dom/node_modules/@types/react';
 import { SQLQuery } from '@grafana/aws-sdk';
-import {
-  DataSourceSettings,
-  DataSourceJsonData,
-  SelectableValue,
-  DataSourcePluginOptionsEditorProps,
-} from '@grafana/data';
+// import {
+//   DataSourceSettings,
+//   DataSourceJsonData,
+//   SelectableValue,
+//   DataSourcePluginOptionsEditorProps,
+// } from '@grafana/data';
+// import { InputActionMeta } from '@grafana/ui';
+
+import { InlineField, Input } from '@grafana/ui';
+
+import React, { FC } from 'react';
+import { DataSourceJsonData, DataSourceSettings, DataSourcePluginOptionsEditorProps, SelectableValue } from '@grafana/data';
 import { InputActionMeta } from '@grafana/ui';
+import { FormEvent } from 'react-dom/node_modules/@types/react';
+
+export interface InlineInputProps extends DataSourcePluginOptionsEditorProps<{}, AwsAuthDataSourceSecureJsonData> {
+  value: string;
+  onChange: (e: FormEvent<HTMLInputElement>) => void;
+  label?: string;
+  tooltip?: string;
+  placeholder?: string;
+  'data-testid'?: string;
+  hidden?: boolean;
+  disabled?: boolean;
+  labelWidth?: number;
+}
+
+export function InlineInput(props: InlineInputProps) {
+  return (
+    <InlineField
+      label={props.label}
+      labelWidth={props.labelWidth ?? DEFAULT_LABEL_WIDTH}
+      tooltip={props.tooltip}
+      hidden={props.hidden}
+      disabled={props.disabled}
+    >
+      <Input
+        data-testid={props['data-testid']}
+        className="width-30"
+        value={props.value}
+        onChange={props.onChange}
+        placeholder={props.placeholder}
+        disabled={props.disabled}
+      />
+    </InlineField>
+  );
+}
+
+
+
+import {
+  // InlineInputProps,
+  // InlineInput,
+  // ConfigSelect,
+  // ConnectionConfig,
+} from '@grafana/aws-sdk';
 
 // import { DataSourceJsonData, DataSourceSettings, DataSourcePluginOptionsEditorProps, SelectableValue, DataQuery, DataSourceApi, QueryEditorProps, ScopedVars } from '@grafana/data';
 
@@ -17,7 +66,7 @@ export interface AwsAuthDataSourceSecureJsonData {
   sessionToken?: string;
 }
 
-export declare enum AwsAuthType {
+declare enum AwsAuthType {
   Keys = 'keys',
   Credentials = 'credentials',
   Default = 'default',
@@ -72,32 +121,31 @@ export interface ConfigSelectProps
   labelWidth?: number;
 }
 
-export declare function ConfigSelect(props: ConfigSelectProps): JSX.Element;
+declare function ConfigSelect(props: ConfigSelectProps): JSX.Element;
 
 export interface AwsAuthDataSourceSecureJsonData {
   accessKey?: string;
   secretKey?: string;
   sessionToken?: string;
 }
-export declare type AwsAuthDataSourceSettings = DataSourceSettings<
+declare type AwsAuthDataSourceSettings = DataSourceSettings<
   AwsAuthDataSourceJsonData,
   AwsAuthDataSourceSecureJsonData
 >;
 
-export interface InlineInputProps extends DataSourcePluginOptionsEditorProps<{}, AwsAuthDataSourceSecureJsonData> {
-  value: string;
-  onChange: (e: FormEvent<HTMLInputElement>) => void;
-  label?: string;
-  tooltip?: string;
-  placeholder?: string;
-  'data-testid'?: string;
-  hidden?: boolean;
-  disabled?: boolean;
-  labelWidth?: number;
-}
-export declare function InlineInput(props: InlineInputProps): JSX.Element;
-
-export declare const DEFAULT_LABEL_WIDTH = 28;
+// export interface InlineInputProps extends DataSourcePluginOptionsEditorProps<{}, AwsAuthDataSourceSecureJsonData> {
+//   value: string;
+//   onChange: (e: FormEvent<HTMLInputElement>) => void;
+//   label?: string;
+//   tooltip?: string;
+//   placeholder?: string;
+//   'data-testid'?: string;
+//   hidden?: boolean;
+//   disabled?: boolean;
+//   labelWidth?: number;
+// }
+// declare function InlineInput(props: InlineInputProps): JSX.Element;
+declare const DEFAULT_LABEL_WIDTH = 28;
 
 export interface ConnectionConfigProps<
   J extends AwsAuthDataSourceJsonData = AwsAuthDataSourceJsonData,
@@ -111,8 +159,9 @@ export interface ConnectionConfigProps<
   children?: React.ReactNode;
   labelWidth?: number;
 }
-export declare const ConnectionConfig: FC<ConnectionConfigProps>;
-export declare const SIGV4ConnectionConfig: React.FC<DataSourcePluginOptionsEditorProps<any, any>>;
+export {FC, DataSourcePluginOptionsEditorProps};
+declare const ConnectionConfig: FC<ConnectionConfigProps>;
+declare const SIGV4ConnectionConfig: React.FC<DataSourcePluginOptionsEditorProps<any, any>>;
 
 export enum FormatOptions {
   TimeSeries,

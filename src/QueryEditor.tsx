@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { config } from '@grafana/runtime';
 import { QueryEditorProps } from '@grafana/data';
-import { AthenaDataSourceOptions, AthenaQuery } from './types'; // amorphic-types
+import { AthenaDataSourceOptions, AthenaQuery } from './amorphic-types'; // amorphic-types
 import { DataSource } from './datasource';
 import { QueryEditorForm } from './QueryEditorForm';
 import { QueryEditorHeader } from '@grafana/aws-sdk';

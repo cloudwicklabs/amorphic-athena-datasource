@@ -1,7 +1,7 @@
 import React from 'react';
 import { Checkbox, InlineField, Input, useStyles2 } from '@grafana/ui';
 import { css } from '@emotion/css';
-import { AthenaQuery, DEFAULT_RESULT_REUSE_ENABLED, DEFAULT_RESULT_REUSE_MAX_AGE_IN_MINUTES } from '../types'; // amorphic-types
+import { AthenaQuery, DEFAULT_RESULT_REUSE_ENABLED, DEFAULT_RESULT_REUSE_MAX_AGE_IN_MINUTES } from '../amorphic-types'; // amorphic-types
 import { GrafanaTheme2 } from '@grafana/data';
 
 interface ResultReuseProps {

@@ -5,7 +5,7 @@ import { mockDatasource, mockQuery } from './__mocks__/datasource';
 import '@testing-library/jest-dom';
 import { select } from 'react-select-event';
 import { selectors } from 'tests/selectors';
-import { defaultKey } from './types'; // amorphic-types
+import { defaultKey } from './amorphic-types'; // amorphic-types
 import * as runtime from '@grafana/runtime';
 import * as experimental from '@grafana/experimental';
 

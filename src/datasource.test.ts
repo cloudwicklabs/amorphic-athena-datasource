@@ -1,6 +1,6 @@
 import { DataQueryRequest, DataSourceInstanceSettings, dateTime } from '@grafana/data';
 import * as runtime from '@grafana/runtime';
-import { AthenaDataSourceOptions, AthenaQuery, FormatOptions } from './types'; // amorphic-types
+import { AthenaDataSourceOptions, AthenaQuery, FormatOptions } from './amorphic-types'; // amorphic-types
 
 import { DataSource } from './datasource';
 
