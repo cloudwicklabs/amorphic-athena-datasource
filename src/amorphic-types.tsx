@@ -67,6 +67,7 @@ export interface AwsAuthDataSourceSecureJsonData {
 }
 
 declare enum AwsAuthType {
+  AmorphicKeys = 'amorphic-keys',
   Keys = 'keys',
   Credentials = 'credentials',
   Default = 'default',
