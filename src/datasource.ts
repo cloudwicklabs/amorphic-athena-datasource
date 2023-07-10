@@ -16,7 +16,10 @@ interface RunningQueryInfo {
   queryID?: string;
   shouldCancel?: boolean;
 }
-declare class DatasourceWithAsyncBackend<TQuery extends DataQuery = DataQuery, TOptions extends DataSourceJsonData = DataSourceJsonData> extends DataSourceWithBackend<TQuery, TOptions> {
+declare class DatasourceWithAsyncBackend<
+  TQuery extends DataQuery = DataQuery,
+  TOptions extends DataSourceJsonData = DataSourceJsonData
+> extends DataSourceWithBackend<TQuery, TOptions> {
   private runningQueries;
   private requestCounter;
   private asyncQueryDataSupport;
