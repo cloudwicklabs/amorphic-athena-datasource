@@ -6,6 +6,7 @@ Grafana 10.0.0 was shipped with the new React 18 upgrade. Changes in batching of
 # Quckstart
 
 ```sh
+git config --global url."ssh://git@github.com:cloudwicklabs/".insteadOf "https://github.com/cloudwicklabs/"
 npm run dev && mage -v && docker-compose up --build
 ```
 
