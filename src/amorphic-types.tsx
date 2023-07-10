@@ -1,6 +1,6 @@
 // import React, { FC } from 'react';
 // import { FormEvent } from 'react-dom/node_modules/@types/react';
-import { SQLQuery } from '@grafana/aws-sdk';
+import { SQLQuery } from './amorphic-aws-sdk';
 // import {
 //   DataSourceSettings,
 //   DataSourceJsonData,
@@ -56,7 +56,7 @@ import {
   // InlineInput,
   // ConfigSelect,
   // ConnectionConfig,
-} from '@grafana/aws-sdk';
+} from './amorphic-aws-sdk';
 
 // import { DataSourceJsonData, DataSourceSettings, DataSourcePluginOptionsEditorProps, SelectableValue, DataQuery, DataSourceApi, QueryEditorProps, ScopedVars } from '@grafana/data';
 

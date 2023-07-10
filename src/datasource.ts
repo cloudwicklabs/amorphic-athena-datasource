@@ -2,7 +2,7 @@ import { DataQueryRequest, DataQueryResponse, DataSourceInstanceSettings, Scoped
 import { config, getTemplateSrv, TemplateSrv } from '@grafana/runtime';
 import { AthenaDataSourceOptions, AthenaQuery } from './amorphic-types'; // amorphic-types
 import { AthenaVariableSupport } from './variables';
-import { filterSQLQuery, applySQLTemplateVariables } from '@grafana/aws-sdk';
+import { filterSQLQuery, applySQLTemplateVariables } from './amorphic-aws-sdk';
 import { DatasourceWithAsyncBackend } from '@grafana/async-query-data';
 import { Observable } from 'rxjs';
 import { cloneDeep } from 'lodash';

@@ -10,7 +10,7 @@ import {
   defaultKey,
 } from './amorphic-types'; // amorphic-types
 
-import { InlineInput, ConfigSelect, ConnectionConfig } from '@grafana/aws-sdk';
+import { InlineInput, ConfigSelect, ConnectionConfig } from './amorphic-aws-sdk';
 
 type Props = DataSourcePluginOptionsEditorProps<AthenaDataSourceOptions, AthenaDataSourceSecureJsonData>;
 

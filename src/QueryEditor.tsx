@@ -4,7 +4,7 @@ import { QueryEditorProps } from '@grafana/data';
 import { AthenaDataSourceOptions, AthenaQuery } from './amorphic-types'; // amorphic-types
 import { DataSource } from './datasource';
 import { QueryEditorForm } from './QueryEditorForm';
-import { QueryEditorHeader } from '@grafana/aws-sdk';
+import { QueryEditorHeader } from './amorphic-aws-sdk';
 
 export function QueryEditor(props: QueryEditorProps<DataSource, AthenaQuery, AthenaDataSourceOptions>) {
   const [dataIsStale, setDataIsStale] = useState(false);

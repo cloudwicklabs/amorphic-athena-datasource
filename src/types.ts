@@ -1,4 +1,4 @@
-import { AwsAuthDataSourceJsonData, AwsAuthDataSourceSecureJsonData, SQLQuery } from '@grafana/aws-sdk';
+import { AwsAuthDataSourceJsonData, AwsAuthDataSourceSecureJsonData, SQLQuery } from './amorphic-aws-sdk';
 import { DataSourceSettings, SelectableValue } from '@grafana/data';
 
 export enum FormatOptions {
