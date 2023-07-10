@@ -65,7 +65,7 @@ e2e.scenario({
             e2eSelectors.ConfigEditor.workgroup.wrapper().contains(datasource.jsonData.workgroup);
             e2eSelectors.ConfigEditor.workgroup.input().type(datasource.jsonData.workgroup).type('{enter}');
           },
-          type: 'Amorphic Amazon Athena',
+          type: 'Amorphic Amazon Athena SVY',
         });
 
         // TODO: https://github.com/grafana/grafana/issues/38683
