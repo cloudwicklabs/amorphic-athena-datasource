@@ -3,7 +3,7 @@ import { config, getTemplateSrv, TemplateSrv } from '@grafana/runtime';
 import { AthenaDataSourceOptions, AthenaQuery } from './amorphic-types'; // amorphic-types
 import { AthenaVariableSupport } from './variables';
 import { filterSQLQuery, applySQLTemplateVariables } from './amorphic-aws-sdk';
-// import { DatasourceWithAsyncBackend } from '@grafana/async-query-data';
+import { DatasourceWithAsyncBackend } from '@grafana/async-query-data';
 
 import { DataQuery, DataSourceJsonData, LoadingState } from '@grafana/data';
 import { DataSourceWithBackend } from '@grafana/runtime';
@@ -16,21 +16,21 @@ interface RunningQueryInfo {
   queryID?: string;
   shouldCancel?: boolean;
 }
-declare class DatasourceWithAsyncBackend<
-  TQuery extends DataQuery = DataQuery,
-  TOptions extends DataSourceJsonData = DataSourceJsonData
-> extends DataSourceWithBackend<TQuery, TOptions> {
-  private runningQueries;
-  private requestCounter;
-  private asyncQueryDataSupport;
-  constructor(instanceSettings: DataSourceInstanceSettings<TOptions>, asyncQueryDataSupport?: boolean);
-  query(request: DataQueryRequest<TQuery>): Observable<DataQueryResponse>;
-  storeQuery(target: TQuery, queryInfo: RunningQueryInfo): void;
-  getQuery(target: TQuery): RunningQueryInfo;
-  removeQuery(target: TQuery): void;
-  doSingle(target: TQuery, request: DataQueryRequest<TQuery>): Observable<DataQueryResponse>;
-  cancel: (target: TQuery) => void;
-}
+// declare class DatasourceWithAsyncBackend<
+//   TQuery extends DataQuery = DataQuery,
+//   TOptions extends DataSourceJsonData = DataSourceJsonData
+// > extends DataSourceWithBackend<TQuery, TOptions> {
+//   private runningQueries;
+//   private requestCounter;
+//   private asyncQueryDataSupport;
+//   constructor(instanceSettings: DataSourceInstanceSettings<TOptions>, asyncQueryDataSupport?: boolean);
+//   query(request: DataQueryRequest<TQuery>): Observable<DataQueryResponse>;
+//   storeQuery(target: TQuery, queryInfo: RunningQueryInfo): void;
+//   getQuery(target: TQuery): RunningQueryInfo;
+//   removeQuery(target: TQuery): void;
+//   doSingle(target: TQuery, request: DataQueryRequest<TQuery>): Observable<DataQueryResponse>;
+//   cancel: (target: TQuery) => void;
+// }
 
 export class DataSource extends DatasourceWithAsyncBackend<AthenaQuery, AthenaDataSourceOptions> {
   defaultRegion = '';
