@@ -161,7 +161,7 @@ export interface ConnectionConfigProps<
 }
 export {FC, DataSourcePluginOptionsEditorProps};
 declare const ConnectionConfig: FC<ConnectionConfigProps>;
-declare const SIGV4ConnectionConfig: React.FC<DataSourcePluginOptionsEditorProps<any, any>>;
+// declare const SIGV4ConnectionConfig: React.FC<DataSourcePluginOptionsEditorProps<any, any>>;
 
 export enum FormatOptions {
   TimeSeries,
