@@ -65,18 +65,19 @@ func (s *AthenaDatasource) Settings(_ backend.DataSourceInstanceSettings) sqlds.
 // Connect opens a sql.DB connection using datasource settings
 func (s *AthenaDatasource) Connect(config backend.DataSourceInstanceSettings, queryArgs json.RawMessage) (*sql.DB, error) {
 
-	// cp := NewAmorphicCustomCredentialsProvider("amorphicGatewayURL", "amorphicPatToken", "amorphicRoleId")
-	cp := NewAmorphicCustomCredentialsProvider("example.com", "amorphicPatToken", "amorphicRoleId")
-	if err := cp.Refresh(); err != nil {
-		fmt.Println("RefreshError:", err)
-		return nil, err
-	}
-	credentials, err := cp.GetCredentials()
-	if err != nil {
-		fmt.Println("Error:", err)
-		return nil, err
-	}
-	fmt.Println("Credentials:", credentials)
+	// // cp := NewAmorphicCustomCredentialsProvider("amorphicGatewayURL", "amorphicPatToken", "amorphicRoleId")
+	// cp := NewAmorphicCustomCredentialsProvider("example.com", "amorphicPatToken", "amorphicRoleId")
+	// if err := cp.Refresh(); err != nil {
+	// 	fmt.Println("RefreshError:", err)
+	// 	return nil, err
+	// }
+
+	// credentials, err := cp.GetCredentials()
+	// if err != nil {
+	// 	fmt.Println("Error:", err)
+	// 	return nil, err
+	// }
+	// fmt.Println("Credentials:", credentials)
 
 	s.awsDS.Init(config)
 	args, err := parseArgs(queryArgs)
