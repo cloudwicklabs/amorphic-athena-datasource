@@ -11,6 +11,9 @@ export const Components = {
     AccessKey: {
       input: 'Access Key ID',
     },
+    AmorphicPersonalAccessToken: {
+      input: 'Amorphic Personal Access Token',
+    },
     DefaultRegion: {
       input: 'Default Region',
     },

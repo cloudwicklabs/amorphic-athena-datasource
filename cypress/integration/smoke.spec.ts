@@ -14,6 +14,7 @@ To run these e2e tests:
 type AthenaDatasourceConfig = {
   secureJsonData: {
     accessKey: string;
+    amorphicPersonalAccessToken: string;
     secretKey: string;
   };
   jsonData: {
