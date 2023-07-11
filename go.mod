@@ -3,8 +3,6 @@ module github.com/cloudwicklabs/amorphic-athena-datasource
 go 1.20
 
 require (
-	github.com/aws/aws-sdk-go v1.44.194
-	github.com/google/uuid v1.3.0
 	github.com/grafana/athena-datasource v0.2.4-0.20230620173559-5c9f6a3e1b16
 	github.com/grafana/grafana-aws-sdk v0.15.1
 	github.com/grafana/grafana-plugin-sdk-go v0.161.0
@@ -18,6 +16,7 @@ require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/DATA-DOG/go-sqlmock v1.4.1 // indirect
 	github.com/apache/arrow/go/arrow v0.0.0-20211112161151-bc219186db40 // indirect
+	github.com/aws/aws-sdk-go v1.44.194 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
@@ -36,6 +35,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/flatbuffers v22.11.22+incompatible // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
+	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
