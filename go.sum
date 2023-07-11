@@ -653,10 +653,10 @@ github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWR
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
 github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMnBNeIyt5eFwwo7qiLfzFZmjNmxjkiQlU=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
-github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711214432-f80f285e9e0a h1:eXPqTBCSB+0GNB68hv5wCu+4hGvLASYtVoEmz1K3+fY=
-github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711214432-f80f285e9e0a/go.mod h1:E6seBdRLx65EJDw1dVwcV+ti7E4lwSIcEyJ7UB2USx4=
-github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230707134622-7e35a1f8c737 h1:cUwpBA93ds9iAL4wVt42J+Gm2rhH6b22vxNl8xUKYbQ=
-github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230707134622-7e35a1f8c737/go.mod h1:4jbsFzZvseLhsEmsPhI18fZG40mkJ2xIKPj9UopNz/8=
+github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711215214-191df8be7e41 h1:TAiSTMWwkEViBYM8Jc4Dj7iB+vL//hdirxa0TiarPI4=
+github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711215214-191df8be7e41/go.mod h1:24PQRcyKJw1hUZyZEm0x+q3iMrVGLJwXlYNrTtd3spo=
+github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230711212533-96cf6193cca5 h1:zEWQjhjFwO/CV5rsbJPeBjuA8ozpCHTG37eftc/xTQg=
+github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230711212533-96cf6193cca5/go.mod h1:4jbsFzZvseLhsEmsPhI18fZG40mkJ2xIKPj9UopNz/8=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/cncf/udpa/go v0.0.0-20200629203442-efcf912fb354/go.mod h1:WmhPx2Nbnhtbo57+VJT5O0JRkEi1Wbu0z5j0R8u5Hbk=
 github.com/cncf/udpa/go v0.0.0-20201120205902-5459f2c99403/go.mod h1:WmhPx2Nbnhtbo57+VJT5O0JRkEi1Wbu0z5j0R8u5Hbk=
