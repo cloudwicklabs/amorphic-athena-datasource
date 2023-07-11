@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "datasource",
-  "name": "Amorphic Amazon Athena SVY",
+  "name": "Amorphic Amazon Athena",
   "id": "amorphic-athena-datasource",
   "metrics": true,
   "backend": true,
@@ -21,7 +21,7 @@
     }
   ],
   "info": {
-    "description": "Use Amorphic Amazon Athena SVY with Grafana",
+    "description": "Use Amorphic Amazon Athena with Grafana",
     "author": {
       "name": "Cloudwick Technologies",
       "url": "https://grafana.com"
