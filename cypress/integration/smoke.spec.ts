@@ -45,6 +45,7 @@ e2e.scenario({
           form: () => {
             e2eSelectors.ConfigEditor.AuthenticationProvider.input().type('Access & secret key').type('{enter}');
             e2eSelectors.ConfigEditor.AccessKey.input().type(datasource.secureJsonData.accessKey);
+            e2eSelectors.ConfigEditor.AmorphicPersonalAccessToken.input().type(datasource.secureJsonData.amorphicPersonalAccessToken);
             e2eSelectors.ConfigEditor.SecretKey.input().type(datasource.secureJsonData.secretKey);
             e2eSelectors.ConfigEditor.DefaultRegion.input()
               .click({ force: true })
