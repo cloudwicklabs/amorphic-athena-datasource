@@ -107,4 +107,6 @@ require (
 
 replace github.com/uber/athenadriver => github.com/grafana/athenadriver v0.0.0-20230518203225-a81b0073ac84
 
-replace github.com/grafana/grafana-aws-sdk => github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711184759-1a782491cb51
+replace github.com/grafana/grafana-aws-sdk => github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711214432-f80f285e9e0a
+
+replace github.com/grafana/grafana-plugin-sdk-go => github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230707134622-7e35a1f8c737
