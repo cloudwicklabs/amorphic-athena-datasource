@@ -10,5 +10,6 @@ services:
     ports:
       - 3000:3000/tcp
     volumes:
+      - ./grafana.ini:/etc/grafana/grafana.ini
       - ./dist:/var/lib/grafana/plugins/amorphic-athena-datasource
       - ./provisioning:/etc/grafana/provisioning
