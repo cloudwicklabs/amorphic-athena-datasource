@@ -6,9 +6,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/grafana/athena-datasource/pkg/athena/api"
-	"github.com/grafana/athena-datasource/pkg/athena/driver"
-	"github.com/grafana/athena-datasource/pkg/athena/models"
+	"github.com/cloudwicklabs/amorphic-athena-datasource/pkg/athena/api"
+	"github.com/cloudwicklabs/amorphic-athena-datasource/pkg/athena/driver"
+	"github.com/cloudwicklabs/amorphic-athena-datasource/pkg/athena/models"
 	"github.com/grafana/grafana-aws-sdk/pkg/awsds"
 	sqlAPI "github.com/grafana/grafana-aws-sdk/pkg/sql/api"
 	"github.com/grafana/grafana-aws-sdk/pkg/sql/datasource"

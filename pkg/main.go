@@ -6,7 +6,7 @@ import (
 	"github.com/cloudwicklabs/amorphic-athena-datasource/pkg/athena"
 	"github.com/grafana/grafana-aws-sdk/pkg/awsds"
 
-	"github.com/grafana/athena-datasource/pkg/athena/routes"
+	"github.com/cloudwicklabs/amorphic-athena-datasource/pkg/athena/routes"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 )

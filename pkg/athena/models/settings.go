@@ -43,6 +43,8 @@ func (s *AthenaDataSourceSettings) Load(config backend.DataSourceInstanceSetting
 
 	s.AccessKey = config.DecryptedSecureJSONData["accessKey"]
 	s.SecretKey = config.DecryptedSecureJSONData["secretKey"]
+	s.SessionToken = config.DecryptedSecureJSONData["sessionToken"]
+	s.AmorphicPersonalAccessToken = config.DecryptedSecureJSONData["amorphicPersonalAccessToken"]
 
 	s.Config = config
 
