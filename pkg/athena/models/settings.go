@@ -41,10 +41,25 @@ func (s *AthenaDataSourceSettings) Load(config backend.DataSourceInstanceSetting
 		}
 	}
 
-	s.AccessKey = config.DecryptedSecureJSONData["accessKey"]
-	s.SecretKey = config.DecryptedSecureJSONData["secretKey"]
-	s.SessionToken = config.DecryptedSecureJSONData["sessionToken"]
 	s.AmorphicPersonalAccessToken = config.DecryptedSecureJSONData["amorphicPersonalAccessToken"]
+
+	if s.AmorphicRoleID != "" || s.AmorphicApiGatewayUrl != "" || s.AmorphicPersonalAccessToken != "" {
+		provider := awsds.NewAmorphicCustomCredentialsProvider(s.AmorphicApiGatewayUrl, s.AmorphicPersonalAccessToken, s.AmorphicRoleID)
+		// Call the GetCredentials method
+		creds, err := provider.GetCredentials()
+		if err != nil {
+			return err
+		}
+		s.AccessKey = *creds.AccessKeyId
+		s.SecretKey = *creds.SecretAccessKey
+		s.SessionToken = *creds.SessionToken
+		backend.Logger.Debug("Updated::AWSDatasourceSettings", fmt.Sprintf("%+v", s)) // TODO remote
+
+	} else {
+		s.AccessKey = config.DecryptedSecureJSONData["accessKey"]
+		s.SecretKey = config.DecryptedSecureJSONData["secretKey"]
+		s.SessionToken = config.DecryptedSecureJSONData["sessionToken"]
+	}
 
 	s.Config = config
 
