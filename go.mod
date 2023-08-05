@@ -100,6 +100,7 @@ require (
 	golang.org/x/crypto v0.1.0 // indirect
 	golang.org/x/exp v0.0.0-20230307190834-24139beb5833 // indirect
 	golang.org/x/net v0.9.0 // indirect
+	golang.org/x/sync v0.1.0 // indirect
 	golang.org/x/sys v0.7.0 // indirect
 	golang.org/x/text v0.9.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
@@ -113,6 +114,6 @@ require (
 
 replace github.com/uber/athenadriver => github.com/grafana/athenadriver v0.0.0-20230518203225-a81b0073ac84
 
-replace github.com/grafana/grafana-aws-sdk => github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711222746-f48a2472687a
+replace github.com/grafana/grafana-aws-sdk => github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230805094904-77437f8cc6b8
 
 replace github.com/grafana/grafana-plugin-sdk-go => github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230711222724-e648fcc17ee4

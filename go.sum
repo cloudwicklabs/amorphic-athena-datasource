@@ -653,8 +653,8 @@ github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWR
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
 github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMnBNeIyt5eFwwo7qiLfzFZmjNmxjkiQlU=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
-github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711222746-f48a2472687a h1:trj4v12HrUwQdtgHt8mWtINewtk0RJVXODz3tboOLXM=
-github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230711222746-f48a2472687a/go.mod h1:QjwPXqulmjYgPOfgBoPDH3uIMcnbgtHls7mLkr4qH30=
+github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230805094904-77437f8cc6b8 h1:GKPTfzfdaXFFZfl0DV5qMTOp1nIR+/qJahh4sGplo3s=
+github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230805094904-77437f8cc6b8/go.mod h1:ehRwoQlojvMCxGirhDZdlpakpHmUwrEHUYfGzZCRpME=
 github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230711222724-e648fcc17ee4 h1:DQL69wrhLRsweSirY8CQCMslSYJPIsW7zUwdQBjJnks=
 github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230711222724-e648fcc17ee4/go.mod h1:4jbsFzZvseLhsEmsPhI18fZG40mkJ2xIKPj9UopNz/8=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
@@ -1345,6 +1345,7 @@ golang.org/x/sync v0.0.0-20220601150217-0de741cfad7f/go.mod h1:RxMgew5VJxzue5/jJ
 golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sync v0.0.0-20220819030929-7fc1605a5dde/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sync v0.0.0-20220929204114-8fcdb60fdcc0/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
+golang.org/x/sync v0.1.0 h1:wsuoTGHzEhffawBOhz5CYhcrV4IdKZbEyZjBMuTp12o=
 golang.org/x/sync v0.1.0/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sys v0.0.0-20180816055513-1c9583448a9c/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20180830151530-49385e6e1522/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
