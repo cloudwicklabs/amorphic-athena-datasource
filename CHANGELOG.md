@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.10.1-amorphic-0.1
+
+- Amorphic first release
+
 ## 2.10.1
 
 - Update dependencies and rebuild lockfile
