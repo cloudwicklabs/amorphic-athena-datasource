@@ -53,7 +53,7 @@ func (s *AthenaDataSourceSettings) Load(config backend.DataSourceInstanceSetting
 		s.AccessKey = *creds.AccessKeyId
 		s.SecretKey = *creds.SecretAccessKey
 		s.SessionToken = *creds.SessionToken
-		backend.Logger.Debug("Updated::AWSDatasourceSettings", fmt.Sprintf("%+v", s)) // TODO remote
+		// backend.Logger.Debug("Updated::AWSDatasourceSettings", fmt.Sprintf("%+v", s)) // TODO remote
 
 	} else {
 		s.AccessKey = config.DecryptedSecureJSONData["accessKey"]
