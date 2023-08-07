@@ -1,6 +1,6 @@
 {
   "name": "amorphic-athena-datasource",
-  "version": "2.10.1",
+  "version": "2.10.1-amorphic-0.1",
   "description": "Use Amorphic Amazon Athena with Grafana",
   "scripts": {
     "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
