@@ -49,7 +49,35 @@ func New(sessionCache *awsds.SessionCache, settings sqlModels.Settings) (api.AWS
 	return &API{Client: athena.New(sess), settings: athenaSettings}, nil
 }
 
+// func (c *API) Renew() error {
+// 	httpClientProvider := sdkhttpclient.NewProvider()
+// 	httpClientOptions, err := c.settings.Config.HTTPClientOptions()
+// 	if err != nil {
+// 		backend.Logger.Error("failed to create HTTP client options", "error", err.Error())
+// 		return err
+// 	}
+
+// 	httpClient, err := httpClientProvider.New(httpClientOptions)
+// 	if err != nil {
+// 		backend.Logger.Error("failed to create HTTP client", "error", err.Error())
+// 		return err
+// 	}
+
+// 	sess, err := c.Client.GetSession(awsds.SessionConfig{
+// 		HTTPClient:    httpClient,
+// 		Settings:      athenaSettings.AWSDatasourceSettings,
+// 		UserAgentName: aws.String("Athena"),
+// 	})
+// 	if err != nil {
+// 		return err
+// 	}
+// 	c.Client = athena.New(sess)
+
+// 	return nil
+// }
+
 func (c *API) Execute(ctx context.Context, input *api.ExecuteQueryInput) (*api.ExecuteQueryOutput, error) {
+
 	athenaInput := &athena.StartQueryExecutionInput{
 		QueryString: aws.String(input.Query),
 		QueryExecutionContext: &athena.QueryExecutionContext{

@@ -2,13 +2,6 @@
 
 Grafana 10.0.0 was shipped with the new React 18 upgrade. Changes in batching of state updates in React 18 cause a bug in the query editor in Athena versions <=2.9.2. If you’re using Grafana@>=10.0.0, please update your plugin to version 2.9.3 or higher in your Grafana instance management console.
 
-# Quckstart
-
-```sh
-git config --global url."ssh://git@github.com:cloudwicklabs/".insteadOf "https://github.com/cloudwicklabs/"
-npm run dev && mage -v && docker-compose up --build
-```
-
 # Athena data source for Grafana
 
 The Athena data source plugin allows you to query and visualize Athena data metrics from within Grafana.
@@ -45,74 +38,7 @@ For authentication options and configuration details, see [AWS authentication](h
 
 ### IAM policies
 
-Grafana needs permissions granted via IAM to be able to read Athena metrics. You can attach these permissions to IAM roles and utilize Grafana's built-in support for assuming roles. Note that you will need to [configure the required policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html) before adding the data source to Grafana.
-
-Depending on the source of the data you'd query with Athena, you may need different permissions. AWS provides some predefined policies that you can check [here](https://docs.aws.amazon.com/athena/latest/ug/managed-policies.html).
-
-This is an example of a minimal policy you can use to query Athena. It is based on the [`AmazonAthenaFullAccess`](https://docs.aws.amazon.com/athena/latest/ug/managed-policies.html#amazonathenafullaccess-managed-policy) policy, without write permissions when possible, since Grafana should be used as read-only:
-
-> **NOTE**: Update the ARN of the S3 bucket if you are using a custom one.
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AthenaQueryAccess",
-      "Effect": "Allow",
-      "Action": [
-        "athena:ListDatabases",
-        "athena:ListDataCatalogs",
-        "athena:ListWorkGroups",
-        "athena:GetDatabase",
-        "athena:GetDataCatalog",
-        "athena:GetQueryExecution",
-        "athena:GetQueryResults",
-        "athena:GetTableMetadata",
-        "athena:GetWorkGroup",
-        "athena:ListTableMetadata",
-        "athena:StartQueryExecution",
-        "athena:StopQueryExecution"
-      ],
-      "Resource": ["*"]
-    },
-    {
-      "Sid": "GlueReadAccess",
-      "Effect": "Allow",
-      "Action": [
-        "glue:GetDatabase",
-        "glue:GetDatabases",
-        "glue:GetTable",
-        "glue:GetTables",
-        "glue:GetPartition",
-        "glue:GetPartitions",
-        "glue:BatchGetPartition"
-      ],
-      "Resource": ["*"]
-    },
-    {
-      "Sid": "AthenaS3Access",
-      "Effect": "Allow",
-      "Action": [
-        "s3:GetBucketLocation",
-        "s3:GetObject",
-        "s3:ListBucket",
-        "s3:ListBucketMultipartUploads",
-        "s3:ListMultipartUploadParts",
-        "s3:AbortMultipartUpload",
-        "s3:PutObject"
-      ],
-      "Resource": ["arn:aws:s3:::aws-athena-query-results-*"]
-    },
-    {
-      "Sid": "AthenaExamplesS3Access",
-      "Effect": "Allow",
-      "Action": ["s3:GetObject", "s3:ListBucket"],
-      "Resource": ["arn:aws:s3:::athena-examples*"]
-    }
-  ]
-}
-```
+Grafana needs permissions granted via an Amorphic role to be able to read Athena data. You can attach these permissions to Amorphic roles and utilize Grafana's built-in support for assuming roles. To generate a Personal Access Token use https://www.docs.amorphicdata.io/docs/latest/home/profile-and-settings/access-tokens
 
 ## Query Athena data
 

@@ -2,6 +2,13 @@
 
 ## How to build the Athena data source plugin locally
 
+```sh
+git config --global url."ssh://git@github.com:cloudwicklabs/".insteadOf "https://github.com/cloudwicklabs/"
+npm run dev && mage -v && \
+ npx @grafana/sign-plugin@latest --rootUrls https://example.com/amorphic,http://127.0.0.1:3000 && \
+ docker-compose up --build
+```
+
 ## Dependencies
 
 Make sure you have the following dependencies installed first:
