@@ -132,6 +132,8 @@ datasources:
     type: amorphic-athena-datasource
     jsonData:
       authType: amorphic
+      amorphicApiGatewayUrl: https://j3vnhv5rlb.execute-api.us-east-1.amazonaws.com/poc/
+      amorphicRoleId: admin-role-06274b74-8da9-4d41-86e2-b5aca3802065
       defaultRegion: eu-west-2
       catalog: AwsDataCatalog
       database: '<your athena database>'
@@ -182,6 +184,7 @@ datasources:
       authType: keys
       defaultRegion: eu-west-2
     secureJsonData:
+      amorphicPersonalAccessToken: '<your access key>'
       accessKey: '<your access key>'
       secretKey: '<your secret key>'
       catalog: AwsDataCatalog
@@ -217,6 +220,7 @@ jsonData:
 ### Acknowledgment
 
 The backend driver is based on the implementation of [uber/athenadriver](https://github.com/uber/athenadriver), which provides a fully-featured driver for AWS Athena.
+The project is based on [grafana/athena-datasource](https://github.com/grafana/athena-datasource).
 
 ## Get the most out of the plugin
 

@@ -653,8 +653,8 @@ github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWR
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
 github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMnBNeIyt5eFwwo7qiLfzFZmjNmxjkiQlU=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
-github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230805094904-77437f8cc6b8 h1:GKPTfzfdaXFFZfl0DV5qMTOp1nIR+/qJahh4sGplo3s=
-github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230805094904-77437f8cc6b8/go.mod h1:ehRwoQlojvMCxGirhDZdlpakpHmUwrEHUYfGzZCRpME=
+github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230807112249-748b076dfb9d h1:4QgeZGMqIerdY+ccEkLVIqBPFxzbh47ZYhFQtmR7Yts=
+github.com/cloudwicklabs/amorphic-grafana-aws-sdk v0.0.0-20230807112249-748b076dfb9d/go.mod h1:ehRwoQlojvMCxGirhDZdlpakpHmUwrEHUYfGzZCRpME=
 github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230711222724-e648fcc17ee4 h1:DQL69wrhLRsweSirY8CQCMslSYJPIsW7zUwdQBjJnks=
 github.com/cloudwicklabs/amorphic-grafana-plugin-sdk-go v0.0.0-20230711222724-e648fcc17ee4/go.mod h1:4jbsFzZvseLhsEmsPhI18fZG40mkJ2xIKPj9UopNz/8=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
